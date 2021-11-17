@@ -55,7 +55,9 @@ public class UniversityController implements Initializable {
         ListControl.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<DataHandler.UniversityDataTypes>() {
             @Override
             public void changed(ObservableValue<? extends DataHandler.UniversityDataTypes> observableValue, DataHandler.UniversityDataTypes universityDataTypes, DataHandler.UniversityDataTypes t1) {
-
+                NameField.setText(t1.name);
+                UniversityCountryField.setText(t1.country);
+                websiteDisplayField.setText(t1.web_pages.toString());
             }
         });
     }
